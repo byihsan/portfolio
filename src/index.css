@@ -9,11 +9,10 @@ body {
   background-color: rgb(21, 21, 21);
   color: white;
   font-family: 'Poppins', sans-serif;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   text-align: center;
   width: 100vw;
+  overflow-x: hidden;
+  line-height: 1.6;
 }
 
 /* === GENERAL LAYOUT === */
@@ -22,40 +21,51 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  gap: 120px; /* space between major sections */
+  padding-top: 100px;
+  padding-bottom: 120px;
 }
 
 section {
-  margin: 80px 0;
   width: 90%;
-  max-width: 1000px;
+  max-width: 1100px;
+  padding: 60px 0;
+  border-radius: 12px;
 }
 
 h1, h2, h3 {
-  margin-bottom: 20px;
+  margin-bottom: 25px;
+  font-weight: 600;
 }
 
 h1 {
-  font-size: 3rem;
+  font-size: 3.2rem;
 }
 
 h2 {
-  font-size: 2rem;
+  font-size: 2.2rem;
+  margin-bottom: 40px;
+  color: rgb(100, 186, 214);
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+  padding-bottom: 10px;
 }
 
 h3 {
-  font-size: 1.5rem;
+  font-size: 1.6rem;
+  margin-bottom: 25px;
+  color: rgb(180, 180, 180);
 }
 
 .subtext {
   font-size: 1.2rem;
-  opacity: 0.8;
+  opacity: 0.85;
 }
 
 .highlight {
   color: rgb(100, 186, 214);
   font-weight: 600;
-  font-size: 1.3rem;
-  margin: 15px 0;
+  font-size: 1.4rem;
+  margin: 20px 0 40px 0;
 }
 
 /* === BUTTONS === */
@@ -63,10 +73,11 @@ h3 {
   background-color: rgb(100, 186, 214);
   color: black;
   border: none;
-  padding: 10px 25px;
-  border-radius: 25px;
+  padding: 14px 32px;
+  border-radius: 30px;
   cursor: pointer;
   font-weight: bold;
+  font-size: 1rem;
   transition: all 0.3s ease;
 }
 
@@ -76,66 +87,118 @@ h3 {
 }
 
 /* === PORTFOLIO === */
+.portfolio-group {
+  margin-bottom: 80px;
+}
+
 .portfolio-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 20px;
+  gap: 40px; /* more space between images */
+  margin-top: 30px;
 }
 
 .portfolio-grid img {
   width: 100%;
-  border-radius: 10px;
+  border-radius: 12px;
   object-fit: cover;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.portfolio-grid img:hover {
+  transform: scale(1.03);
+  opacity: 0.95;
 }
 
 /* === LISTS === */
 ul {
   list-style: none;
-  margin-top: 10px;
+  margin-top: 20px;
 }
 
 ul li {
-  margin-bottom: 10px;
+  margin-bottom: 15px;
+  font-size: 1.1rem;
 }
 
 /* === FORM === */
 form {
   display: flex;
   flex-direction: column;
-  gap: 15px;
-  margin-top: 20px;
+  gap: 18px;
+  margin-top: 30px;
 }
 
 input, select, textarea {
   background-color: rgb(30, 30, 30);
   color: white;
   border: 1px solid #444;
-  padding: 10px;
+  padding: 14px;
   border-radius: 8px;
+  font-size: 1rem;
 }
 
 input:focus, select:focus, textarea:focus {
   outline: 1px solid rgb(100, 186, 214);
 }
 
+textarea {
+  resize: none;
+}
+
 /* === FOOTER === */
 footer {
   border-top: 1px solid #333;
-  padding: 40px 0;
+  padding: 60px 0 40px 0;
   width: 100%;
   text-align: center;
 }
 
 .footer-links {
-  margin-top: 15px;
+  margin-top: 25px;
 }
 
 .footer-links a {
   color: lightblue;
-  margin: 0 10px;
+  margin: 0 15px;
   text-decoration: none;
+  font-size: 1rem;
+  opacity: 0.9;
+  transition: opacity 0.2s ease;
 }
 
 .footer-links a:hover {
   text-decoration: underline;
+  opacity: 1;
+}
+
+/* === RESPONSIVE === */
+@media (max-width: 768px) {
+  #main-div {
+    gap: 80px;
+    padding-top: 60px;
+    padding-bottom: 80px;
+  }
+
+  section {
+    width: 95%;
+    padding: 40px 0;
+  }
+
+  .portfolio-grid {
+    grid-template-columns: 1fr;
+    gap: 25px;
+  }
+
+  h1 {
+    font-size: 2.5rem;
+  }
+
+  h2 {
+    font-size: 1.8rem;
+  }
+
+  h3 {
+    font-size: 1.3rem;
+  }
 }
