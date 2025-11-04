@@ -1,45 +1,141 @@
+/* === BASE === */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-body{
+body {
   background-color: rgb(21, 21, 21);
-  color:white;
+  color: white;
   font-family: 'Poppins', sans-serif;
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
-  height:100vh;
+  width: 100vw;
 }
 
-#logo-text {
-  font-size: 100px;
-
-}
-
-#coming-text {
-  font-size:25px;
-  margin-bottom:30px;
-}
-
+/* === GENERAL LAYOUT === */
 #main-div {
+  width: 100%;
   display: flex;
-  justify-content: center;
   flex-direction: column;
   align-items: center;
-  width:100vw;
-  margin-bottom:30px;
 }
 
-#flowersGif {
-  width:30%;
-  margin-top:20px;
-  margin-bottom:30px;
+section {
+  margin: 80px 0;
+  width: 90%;
+  max-width: 1000px;
 }
 
-#ig-link {
-  color:lightblue
+h1, h2, h3 {
+  margin-bottom: 20px;
+}
+
+h1 {
+  font-size: 3rem;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+h3 {
+  font-size: 1.5rem;
+}
+
+.subtext {
+  font-size: 1.2rem;
+  opacity: 0.8;
+}
+
+.highlight {
+  color: rgb(100, 186, 214);
+  font-weight: 600;
+  font-size: 1.3rem;
+  margin: 15px 0;
+}
+
+/* === BUTTONS === */
+.primary-btn {
+  background-color: rgb(100, 186, 214);
+  color: black;
+  border: none;
+  padding: 10px 25px;
+  border-radius: 25px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.primary-btn:hover {
+  background-color: rgb(80, 149, 172);
+  transform: scale(1.05);
+}
+
+/* === PORTFOLIO === */
+.portfolio-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.portfolio-grid img {
+  width: 100%;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+/* === LISTS === */
+ul {
+  list-style: none;
+  margin-top: 10px;
+}
+
+ul li {
+  margin-bottom: 10px;
+}
+
+/* === FORM === */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+input, select, textarea {
+  background-color: rgb(30, 30, 30);
+  color: white;
+  border: 1px solid #444;
+  padding: 10px;
+  border-radius: 8px;
+}
+
+input:focus, select:focus, textarea:focus {
+  outline: 1px solid rgb(100, 186, 214);
+}
+
+/* === FOOTER === */
+footer {
+  border-top: 1px solid #333;
+  padding: 40px 0;
+  width: 100%;
+  text-align: center;
+}
+
+.footer-links {
+  margin-top: 15px;
+}
+
+.footer-links a {
+  color: lightblue;
+  margin: 0 10px;
+  text-decoration: none;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
 }
