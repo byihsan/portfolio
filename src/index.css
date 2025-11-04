@@ -1,204 +1,169 @@
 /* === BASE === */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
 body {
-  background-color: rgb(21, 21, 21);
+  background-color: rgb(15,15,15);
   color: white;
   font-family: 'Poppins', sans-serif;
   text-align: center;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
   width: 100vw;
   overflow-x: hidden;
-  line-height: 1.6;
 }
 
-/* === GENERAL LAYOUT === */
+/* === MAIN LAYOUT === */
 #main-div {
-  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 120px; /* space between major sections */
-  padding-top: 100px;
-  padding-bottom: 120px;
+  gap: 0;
+  width: 100%;
 }
 
+/* === SECTION BANDS === */
 section {
-  width: 90%;
-  max-width: 1100px;
-  padding: 60px 0;
+  width: 100%;
+  padding: 80px 20px;
+}
+
+section:nth-of-type(odd) { background-color: rgb(25,20,20); }
+section:nth-of-type(even) { background-color: rgb(20,15,15); }
+
+/* === TYPOGRAPHY === */
+h1 { font-size: 3.5rem; margin-bottom: 15px; }
+h2 { font-size: 2.5rem; color: rgb(255,140,120); margin: 10px 0 25px 0; }
+h3 { font-size: 1.6rem; color: rgb(180,180,180); margin-bottom: 20px; }
+.subtext { font-size: 1.1rem; opacity: 0.85; margin-bottom: 25px; }
+
+/* === PORTFOLIO === */
+.portfolio-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+.portfolio-grid img {
+  width: 300px;
+  border-radius: 15px;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.portfolio-grid img:hover {
+  transform: scale(1.05);
+  opacity: 0.95;
+}
+
+/* === LISTS === */
+section ul {
+  list-style: none;
+  padding-left: 0;
+  margin: 20px 0 30px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+
+#why-me ul li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 1.1rem;
+}
+
+#why-me ul li::before {
+  content: "✔";
+  color: rgb(0,180,170);
+  font-weight: bold;
+  flex-shrink: 0;
+}
+
+/* Pricing */
+#pricing ul li {
+  font-size: 1.1rem;
+  color: rgb(200,200,200);
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  background-color: rgb(30,30,30);
+  padding: 12px 20px;
   border-radius: 12px;
-}
-
-h1, h2, h3 {
-  margin-bottom: 25px;
-  font-weight: 600;
-}
-
-h1 {
-  font-size: 3.2rem;
-}
-
-h2 {
-  font-size: 2.2rem;
-  margin-bottom: 40px;
-  color: rgb(100, 186, 214);
-  border-bottom: 1px solid rgba(255,255,255,0.1);
-  padding-bottom: 10px;
-}
-
-h3 {
-  font-size: 1.6rem;
-  margin-bottom: 25px;
-  color: rgb(180, 180, 180);
-}
-
-.subtext {
-  font-size: 1.2rem;
-  opacity: 0.85;
-}
-
-.highlight {
-  color: rgb(100, 186, 214);
-  font-weight: 600;
-  font-size: 1.4rem;
-  margin: 20px 0 40px 0;
+  width: fit-content;
+  margin-bottom: 15px;
 }
 
 /* === BUTTONS === */
 .primary-btn {
-  background-color: rgb(100, 186, 214);
-  color: black;
-  border: none;
-  padding: 14px 32px;
+  background-color: rgb(255,140,120);
+  padding: 16px 36px;
   border-radius: 30px;
-  cursor: pointer;
+  color: black;
   font-weight: bold;
+  cursor: pointer;
+  border: none;
   font-size: 1rem;
   transition: all 0.3s ease;
 }
 
 .primary-btn:hover {
-  background-color: rgb(80, 149, 172);
+  background-color: rgb(220,110,95);
   transform: scale(1.05);
 }
 
-/* === PORTFOLIO === */
-.portfolio-group {
-  margin-bottom: 80px;
-}
-
-.portfolio-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 40px; /* more space between images */
-  margin-top: 30px;
-}
-
-.portfolio-grid img {
-  width: 100%;
-  border-radius: 12px;
-  object-fit: cover;
-  transition: transform 0.3s ease, opacity 0.3s ease;
-}
-
-.portfolio-grid img:hover {
-  transform: scale(1.03);
-  opacity: 0.95;
-}
-
-/* === LISTS === */
-ul {
-  list-style: none;
-  margin-top: 20px;
-}
-
-ul li {
-  margin-bottom: 15px;
-  font-size: 1.1rem;
-}
-
-/* === FORM === */
+/* === CONTACT FORM === */
 form {
   display: flex;
   flex-direction: column;
-  gap: 18px;
-  margin-top: 30px;
+  gap: 20px;
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
 }
 
-input, select, textarea {
-  background-color: rgb(30, 30, 30);
+input, textarea, select {
+  background-color: rgb(30,30,30);
   color: white;
   border: 1px solid #444;
-  padding: 14px;
   border-radius: 8px;
+  padding: 14px;
   font-size: 1rem;
+  transition: border 0.3s ease, box-shadow 0.3s ease;
 }
 
-input:focus, select:focus, textarea:focus {
-  outline: 1px solid rgb(100, 186, 214);
+input:focus, textarea:focus, select:focus {
+  outline: none;
+  border-color: rgb(255,140,120);
+  box-shadow: 0 0 8px rgba(255,140,120,0.5);
 }
 
-textarea {
-  resize: none;
-}
+textarea { resize: none; min-height: 120px; }
+select { appearance: none; cursor: pointer; }
 
 /* === FOOTER === */
 footer {
-  border-top: 1px solid #333;
-  padding: 60px 0 40px 0;
+  border-top: 1px solid rgba(255,255,255,0.1);
+  padding: 50px 20px 30px 20px;
   width: 100%;
   text-align: center;
 }
 
-.footer-links {
-  margin-top: 25px;
-}
-
+.footer-links { margin-top: 20px; }
 .footer-links a {
-  color: lightblue;
+  color: rgb(255,140,120);
   margin: 0 15px;
   text-decoration: none;
   font-size: 1rem;
   opacity: 0.9;
   transition: opacity 0.2s ease;
 }
-
-.footer-links a:hover {
-  text-decoration: underline;
-  opacity: 1;
-}
+.footer-links a:hover { opacity: 1; text-decoration: underline; }
 
 /* === RESPONSIVE === */
-@media (max-width: 768px) {
-  #main-div {
-    gap: 80px;
-    padding-top: 60px;
-    padding-bottom: 80px;
-  }
-
-  section {
-    width: 95%;
-    padding: 40px 0;
-  }
-
-  .portfolio-grid {
-    grid-template-columns: 1fr;
-    gap: 25px;
-  }
-
-  h1 {
-    font-size: 2.5rem;
-  }
-
-  h2 {
-    font-size: 1.8rem;
-  }
-
-  h3 {
-    font-size: 1.3rem;
-  }
+@media(max-width:768px){
+  h1 { font-size: 2.8rem; }
+  h2 { font-size: 2rem; }
+  h3 { font-size: 1.3rem; }
+  .portfolio-grid img { width: 90%; max-width: 300px; }
+  form { width: 90%; }
 }

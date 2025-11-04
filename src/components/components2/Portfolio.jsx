@@ -8,7 +8,7 @@ export default function Portfolio() {
       <h2>Portfolio</h2>
 
       <div className="portfolio-group">
-        <h3>Event Flyers ($15–$30)</h3>
+        <h3>Event Flyers ($xx–$xxx)</h3>
         <div className="portfolio-grid">
           <img src={eidFlyer} alt="Eid Flyer" />
           <img src={yoloFlyer} alt="Youth Event" />
@@ -34,7 +34,7 @@ export default function Portfolio() {
       </div>
 
       <div className="portfolio-group">
-        <h3>Thumbnails ($5–$15)</h3>
+        <h3>Thumbnails ($x–$xxx)</h3>
         <div className="portfolio-grid">
           <img src={placeholder} alt="Omar Suleiman" />
           <img src={placeholder} alt="Islamic Reminder" />
