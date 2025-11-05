@@ -8,7 +8,7 @@ export default function Portfolio() {
       <h2>Portfolio</h2>
 
       <div className="portfolio-group">
-        <h3>Event Flyers ($50-$150)</h3>
+        <h3>Event Flyers ($150)</h3>
         <div className="portfolio-grid">
           <img src={eidFlyer} alt="Eid Flyer" />
           <img src={yoloFlyer} alt="Youth Event" />
