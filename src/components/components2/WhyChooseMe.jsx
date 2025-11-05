@@ -7,7 +7,9 @@ export default function WhyChooseMe() {
         <li>First Order Free | No Risk</li>
         <li>Quick Turnaround | Reliable & Professional</li>
       </ul>
-      <button className="primary-btn">Get Started</button>
+      <a href="#contact">
+        <button className="primary-btn">Get Started</button>
+      </a>
     </section>
   );
 }
