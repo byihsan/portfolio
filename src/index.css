@@ -184,25 +184,16 @@ footer {
   text-decoration: underline;
 }
 
-/* === Top Banner === */
+/* === Top Banner (static) === */
 .top-banner {
-  position: fixed; /* stay at top while scrolling */
-  top: 0;
-  left: 0;
   width: 100%;
-  background-color: #fff173; /* calm yellow */
+  background-color: #ffed4d; /* calm yellow */
   color: #333;
   text-align: center;
-  padding: 10px 0;
+  padding: 12px 0;
   font-weight: 500;
   font-size: 0.95rem;
-  z-index: 1000; /* stay above everything else */
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1); /* subtle depth */
-}
-
-/* === Push hero content down so it’s not hidden under banner === */
-#hero {
-  padding-top: 60px; /* adjust based on banner height */
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05); /* subtle depth */
 }
 
 
