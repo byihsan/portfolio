@@ -4,7 +4,7 @@ export default function WhyChooseMe() {
       <h2>Why Choose Me?</h2>
       <ul>
         <li>8 Years Experience | Hundreds of Projects Completed</li>
-        <li>First Order Free | No Risk</li>
+        <li>First Design Free | No Risk</li>
         <li>Quick Turnaround | Reliable & Professional</li>
       </ul>
       <a href="#contact">
