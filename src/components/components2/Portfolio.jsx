@@ -1,6 +1,7 @@
 import eidFlyer from "./../../assets/eid_flyer.png"
 import yoloFlyer from "./../../assets/yolo_flyer.png"
 import placeholder from "./../../assets/placeholder.png"
+import nikkahPoster from "./../../assets/nikkahPoster.png"
 
 export default function Portfolio() {
   return (
@@ -11,6 +12,7 @@ export default function Portfolio() {
         <h3>Event Flyers ($150)</h3>
         <div className="portfolio-grid">
           <img src={eidFlyer} alt="Eid Flyer" />
+          <img src={nikkahPoster} alt="Nikkah Poster" />
           <img src={yoloFlyer} alt="Youth Event" />
           {/* <img src={placeholder} alt="YMCA Flyer" />
           <img src={placeholder} alt="Hospital Flyer" /> */}
@@ -26,7 +28,7 @@ export default function Portfolio() {
       </div>
 
       <div className="portfolio-group">
-        <h3>Small Business Ads (Custom)</h3>
+        <h3>Business Ads (Custom)</h3>
         <div className="portfolio-grid">
           <img src={placeholder} alt="Car Detailing Ad" />
           <img src={placeholder}  alt="Bakery/Cafe Ad" />

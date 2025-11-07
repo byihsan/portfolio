@@ -5,7 +5,7 @@ export default function Contact() {
       <p>Click the link below to start your order!</p>
 
     <a href="https://forms.gle/gk4T75TMzBK9Gx3t8" target="_blank">
-      <button className="primary-btn">Open Form</button>
+      <button className="primary-btn">Order</button>
     </a>
     </section>
   );
