@@ -1,7 +1,9 @@
 import eidFlyer from "./../../assets/eid_flyer.png"
-import yoloFlyer from "./../../assets/yolo_flyer.png"
+// import yoloFlyer from "./../../assets/yolo_flyer.png"
 import placeholder from "./../../assets/placeholder.png"
-import nikkahPoster from "./../../assets/nikkahPoster.png"
+// import nikkahPoster from "./../../assets/nikkahPoster.png"
+import reflectPoster from "./../../assets/reflectposter.jpg"
+import alonePoster from "./../../assets/alone.png"
 
 export default function Portfolio() {
   return (
@@ -9,11 +11,11 @@ export default function Portfolio() {
       <h2>Portfolio</h2>
 
       <div className="portfolio-group">
-        <h3>Event Flyers ($150)</h3>
+        <h3>Event Flyers (<s><small id="old-price">$150</small></s> $120)</h3>
         <div className="portfolio-grid">
           <img src={eidFlyer} alt="Eid Flyer" />
-          <img src={nikkahPoster} alt="Nikkah Poster" />
-          <img src={yoloFlyer} alt="Youth Event" />
+          <img src={reflectPoster} alt="Reflect Event Poster" />
+          <img src={alonePoster} alt="Not Alone Event" />
           {/* <img src={placeholder} alt="YMCA Flyer" />
           <img src={placeholder} alt="Hospital Flyer" /> */}
         </div>
